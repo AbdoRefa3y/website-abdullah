@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>عبدالله رفاعي | الموقع الشخصي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * { scroll-behavior: smooth; box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Amiri', serif;
+      background: linear-gradient(to left, #f8f5f2, #ffffff);
+      color: #2c2c2c;
+    }
+    header {
+      background: linear-gradient(to right, #3e3e3e, #1a1a1a);
+      color: white;
+      text-align: center;
+      padding: 70px 20px 40px;
+      position: relative;
+    }
+    header h1 { font-size: 42px; margin: 0; }
+    header p { font-size: 20px; margin-top: 10px; color: #ccc; }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #d4af37;
+      color: #fff;
+      padding: 5px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .download-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 12px 25px;
+      background: #d4af37;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav a:hover { background-color: #444; }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      display: none;
+    }
+    section.active { display: block; animation: fadeIn 1s ease-in-out; }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .box {
+      background-color: #f2f2f2;
+      margin: 10px 0;
+      padding: 15px;
+      border-right: 5px solid #d4af37;
+      font-size: 18px;
+    }
+    footer {
+      text-align: center;
+      background-color: #1a1a1a;
+      color: #ccc;
+      padding: 25px;
+      font-size: 14px;
+    }
+    .icon { margin-left: 10px; color: #d4af37; }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25d366;
+      color: white;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      nav a { padding: 12px; font-size: 16px; }
+      .download-btn, .lang-toggle { font-size: 16px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="lang-toggle" onclick="toggleLang()">English</button>
+    <h1 id="name">عبدالله رفاعي</h1>
+    <p id="desc">طالب نظم معلومات إدارية | بصمم مستقبلي خطوة بخطوة</p>
+    <a id="cvBtn" href="#" class="download-btn"><i class="fas fa-file-arrow-down"></i> تحميل السيرة الذاتية</a>
+  </header>
+
+  <nav>
+    <a href="#about" onclick="showSection('about')">🧍 من أنا</a>
+    <a href="#skills" onclick="showSection('skills')">🛠️ المهارات</a>
+    <a href="#vision" onclick="showSection('vision')">🎯 رؤيتي</a>
+    <a href="#contact" onclick="showSection('contact')">📞 تواصل</a>
+  </nav>
+
+  <section id="about" class="active">
+    <h2>من أنا</h2>
+    <p class="box" data-en="I'm a second-year MIS student. I started from street-level work, gained real-life experience, and now learning marketing and content creation.">أنا طالب نظم معلومات إدارية في الفرقة الثانية، بدأت من الشغل الشعبي وكسبت خبرة عملية، ودلوقتي بتعلم التسويق وصناعة المحتوى.</p>
+  </section>
+
+  <section id="skills">
+    <h2>المهارات</h2>
+    <div class="box" data-en="Communication and persuasion"><i class="fas fa-comments icon"></i> التواصل والإقناع</div>
+    <div class="box" data-en="Time management and organization"><i class="fas fa-clock icon"></i> إدارة الوقت والتنظيم</div>
+    <div class="box" data-en="Basic digital marketing"><i class="fas fa-bullhorn icon"></i> التسويق الرقمي الأساسي</div>
+    <div class="box" data-en="Word / Excel"><i class="fas fa-file-alt icon"></i> Word و Excel</div>
+  </section>
+
+  <section id="vision">
+    <h2>رؤيتي</h2>
+    <p class="box" data-en="I want to help real projects succeed and build my own project. I'm driven by learning and persistence.">نفسي أساعد مشاريع حقيقية تنجح، وابدأ مشروعي الخاص. التعلم المستمر والإصرار هما طريقي.</p>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل</h2>
+    <p class="box"><i class="fas fa-envelope icon"></i> 2Abdoelsayed7@gmail.com</p>
+    <p class="box"><i class="fas fa-phone icon"></i> 01011738431</p>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/201011738431" target="_blank" title="تواصل واتساب"><i class="fab fa-whatsapp"></i></a>
+
+  <footer>&copy; 2025 عبدالله رفاعي – كل خطوة بتعلّمني طريق النجاح.</footer>
+
+  <script>
+    const toggleLang = () => {
+      const current = document.documentElement.lang;
+      const isArabic = current === 'ar';
+      document.documentElement.lang = isArabic ? 'en' : 'ar';
+      document.body.dir = isArabic ? 'ltr' : 'rtl';
+      document.querySelector('.lang-toggle').textContent = isArabic ? 'العربية' : 'English';
+      document.getElementById('name').textContent = isArabic ? 'Abdallah Refai' : 'عبدالله رفاعي';
+      document.getElementById('desc').textContent = isArabic
+        ? 'MIS Student | Building my future step by step'
+        : 'طالب نظم معلومات إدارية | بصمم مستقبلي خطوة بخطوة';
+      document.getElementById('cvBtn').innerHTML = isArabic
+        ? '<i class="fas fa-file-arrow-down"></i> Download CV'
+        : '<i class="fas fa-file-arrow-down"></i> تحميل السيرة الذاتية';
+      document.querySelectorAll('.box').forEach(box => {
+        const enText = box.getAttribute('data-en');
+        if (enText) {
+          const temp = box.innerHTML;
+          box.innerHTML = enText;
+          box.setAttribute('data-en', temp);
+        }
+      });
+    }
+
+    const showSection = id => {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
