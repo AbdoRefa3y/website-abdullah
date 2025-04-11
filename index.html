@@ -5,14 +5,15 @@
   <meta charset="UTF-8" />
   <title>Abdallah Refai | Personal Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Amiri', serif;
-      background: #fdfdfd;
-      color: #2c2c2c;
+      background: #f9f9f9;
+      color: #222;
     }
     header {
       background: #111;
@@ -21,19 +22,19 @@
       padding: 60px 20px;
       position: relative;
     }
-    header h1 { margin: 0; font-size: 36px; }
-    header p { margin-top: 10px; font-size: 18px; color: #ccc; }
+    header h1 { margin: 0; font-size: 40px; }
+    header p { font-size: 18px; margin-top: 10px; color: #ccc; }
     .lang-toggle {
       position: absolute;
       top: 20px;
       right: 20px;
       background: #d4af37;
       color: white;
-      border: none;
       padding: 8px 16px;
+      border: none;
       border-radius: 6px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
     .download-cv {
       display: inline-block;
@@ -46,22 +47,27 @@
       font-weight: bold;
     }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       background: #fff;
-      padding: 30px 20px;
+      padding: 30px 40px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     h2 {
-      font-size: 26px;
+      font-size: 28px;
       color: #333;
       border-bottom: 2px solid #d4af37;
-      padding-bottom: 8px;
+      padding-bottom: 10px;
       margin-bottom: 20px;
     }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 10px; line-height: 1.6; }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
     footer {
       background: #1a1a1a;
       color: #ccc;
@@ -80,21 +86,25 @@
       padding: 10px 15px;
       border-radius: 50%;
       text-decoration: none;
-      z-index: 1000;
+      z-index: 999;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     .arabic { display: none; direction: rtl; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 28px; }
+      section { padding: 25px 20px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <button class="lang-toggle" onclick="toggleLang()">العربية</button>
-    <h1 id="pageTitle">Abdallah Refai</h1>
-    <p id="pageDesc">MIS Student | Building my future step by step</p>
-    <a class="download-cv" href="Abdallah_Refai_CV.pdf" download><i class="fas fa-download"></i> Download CV (PDF)</a>
+    <h1>Abdallah Refai</h1>
+    <p>MIS Student | Building my future step by step</p>
+    <a class="download-cv" href="Abdallah_Refai_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
   </header>
 
-  <!-- English Version -->
   <div class="english">
     <section><h2>About Me</h2><p>I'm a second-year MIS student with hands-on experience from real environments. I’m fast-learning, organized, and love solving problems quickly.</p></section>
     <section><h2>Work Experience</h2><ul><li><b>Sales Representative (2021–2023):</b> Gained customer service experience under pressure.</li><li><b>Advertising Assistant (2023–Present):</b> Assisted with planning and marketing presentations in a real team setting.</li></ul></section>
@@ -104,7 +114,6 @@
     <section><h2>Contact</h2><ul><li><i class="fas fa-envelope"></i> 2Abdoelsayed7@gmail.com</li><li><i class="fas fa-phone"></i> 01011738431</li><li><i class="fas fa-map-marker-alt"></i> Zeitoun, Cairo</li><li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank">LinkedIn</a></li></ul></section>
   </div>
 
-  <!-- Arabic Version -->
   <div class="arabic">
     <section><h2>من أنا</h2><p>طالب في الفرقة الثانية – نظم معلومات إدارية. عندي خبرة عملية حقيقية من الشارع، وسريع التعلّم ومنظّم وأحب أواجه التحديات.</p></section>
     <section><h2>الخبرات</h2><ul><li><b>ممثل مبيعات (2023–2021):</b> تعامل مباشر مع العملاء تحت ضغط.</li><li><b>مساعد دعاية وإعلان (حتى الآن):</b> تنفيذ عروض وتسويق فعلي.</li></ul></section>
@@ -114,9 +123,11 @@
     <section><h2>اتصال</h2><ul><li><i class="fas fa-envelope"></i> 2Abdoelsayed7@gmail.com</li><li><i class="fas fa-phone"></i> 01011738431</li><li><i class="fas fa-map-marker-alt"></i> الزيتون، القاهرة</li><li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank">لينكدإن</a></li></ul></section>
   </div>
 
-  <a class="whatsapp-btn" href="https://wa.me/201011738431" target="_blank" title="تواصل واتساب"><i class="fab fa-whatsapp"></i></a>
+  <a class="whatsapp-btn" href="https://wa.me/201011738431" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-  <footer>&copy; 2025 عبدالله رفاعي – كل خطوة بتعلّمني شيئًا جديدًا.</footer>
+  <footer>
+    &copy; 2025 عبدالله رفاعي – كل خطوة بتعلّمني شيئًا جديدًا.
+  </footer>
 
   <script>
     function toggleLang() {
@@ -127,7 +138,6 @@
       document.documentElement.lang = isArabic ? 'en' : 'ar';
       document.body.dir = isArabic ? 'ltr' : 'rtl';
     }
-    // Start English by default
     document.querySelector('.arabic').style.display = 'none';
     document.querySelector('.english').style.display = 'block';
   </script>
