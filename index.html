@@ -2,184 +2,128 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>عبدالله رفاعي | الموقع الشخصي</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    * { scroll-behavior: smooth; box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Amiri', serif;
-      background: linear-gradient(to left, #f8f5f2, #ffffff);
-      color: #2c2c2c;
+      background: #f7f7f7;
+      color: #222;
+      direction: rtl;
     }
     header {
-      background: linear-gradient(to right, #3e3e3e, #1a1a1a);
-      color: white;
+      background: #1a1a1a;
+      color: #fff;
       text-align: center;
-      padding: 70px 20px 40px;
-      position: relative;
-    }
-    header h1 { font-size: 42px; margin: 0; }
-    header p { font-size: 20px; margin-top: 10px; color: #ccc; }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: #d4af37;
-      color: #fff;
-      padding: 5px 15px;
-      border: none;
-      cursor: pointer;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    .download-btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 25px;
-      background: #d4af37;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 6px;
-    }
-    nav {
-      background-color: #222;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      padding: 15px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    nav a:hover { background-color: #444; }
-    section {
       padding: 60px 20px;
+    }
+    header h1 { margin: 0; font-size: 36px; }
+    header p { margin-top: 10px; font-size: 18px; color: #ccc; }
+    section {
       max-width: 900px;
       margin: auto;
-      display: none;
+      padding: 40px 20px;
+      background: #fff;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    section.active { display: block; animation: fadeIn 1s ease-in-out; }
     h2 {
-      font-size: 30px;
+      font-size: 28px;
+      color: #333;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 10px;
       margin-bottom: 20px;
-      color: #444;
     }
-    .box {
-      background-color: #f2f2f2;
-      margin: 10px 0;
-      padding: 15px;
-      border-right: 5px solid #d4af37;
-      font-size: 18px;
-    }
+    ul { padding-right: 20px; }
+    li { margin-bottom: 10px; line-height: 1.6; }
     footer {
-      text-align: center;
-      background-color: #1a1a1a;
+      background: #1a1a1a;
       color: #ccc;
-      padding: 25px;
+      text-align: center;
+      padding: 20px;
       font-size: 14px;
+      margin-top: 40px;
     }
-    .icon { margin-left: 10px; color: #d4af37; }
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background-color: #25d366;
-      color: white;
-      font-size: 24px;
-      padding: 10px 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-      nav a { padding: 12px; font-size: 16px; }
-      .download-btn, .lang-toggle { font-size: 16px; padding: 10px 20px; }
+    .contact-info i {
+      margin-left: 10px;
+      color: #d4af37;
     }
   </style>
 </head>
 <body>
   <header>
-    <button class="lang-toggle" onclick="toggleLang()">English</button>
-    <h1 id="name">عبدالله رفاعي</h1>
-    <p id="desc">طالب نظم معلومات إدارية | بصمم مستقبلي خطوة بخطوة</p>
-    <a id="cvBtn" href="#" class="download-btn"><i class="fas fa-file-arrow-down"></i> تحميل السيرة الذاتية</a>
+    <h1>عبدالله رفاعي</h1>
+    <p>طالب جامعي - نظم معلومات إدارية</p>
   </header>
 
-  <nav>
-    <a href="#about" onclick="showSection('about')">🧍 من أنا</a>
-    <a href="#skills" onclick="showSection('skills')">🛠️ المهارات</a>
-    <a href="#vision" onclick="showSection('vision')">🎯 رؤيتي</a>
-    <a href="#contact" onclick="showSection('contact')">📞 تواصل</a>
-  </nav>
-
-  <section id="about" class="active">
-    <h2>من أنا</h2>
-    <p class="box" data-en="I'm a second-year MIS student. I started from street-level work, gained real-life experience, and now learning marketing and content creation.">أنا طالب نظم معلومات إدارية في الفرقة الثانية، بدأت من الشغل الشعبي وكسبت خبرة عملية، ودلوقتي بتعلم التسويق وصناعة المحتوى.</p>
+  <section>
+    <h2>نبذة عني</h2>
+    <p>
+      طالب في الفرقة الثانية – نظم معلومات إدارية. عندي خبرة عملية حقيقية من شغل الشارع والمجال الشعبي، وده خلاني أتعلّم إزاي أتعامل مع الناس وأحل المشاكل بسرعة.
+      بحب أشتغل تحت ضغط، سريع التعلّم، ومنظّم جدًا، ودائمًا بدور على فرصة أتعلم وأتطور فيها.
+    </p>
   </section>
 
-  <section id="skills">
+  <section>
+    <h2>الخبرات المهنية</h2>
+    <ul>
+      <li><strong>ممثل مبيعات (2021 – 2023):</strong> اكتسبت خبرة عملية حقيقية في التعامل مع مختلف العملاء، وإدارة المواقف اليومية بروتينية، والعمل تحت ضغط في بيئات متغيرة.</li>
+      <li><strong>مساعد في شركة دعاية وإعلان (حتى الآن – 2023):</strong> عملت كمساعد في التنسيق الداخلي وتنفيذ الأنشطة التسويقية داخل فريق التسويق من العرض المباشر لمفاهيم التسويق والإقناع وفهم أساسيات العمل المؤسسي.</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>المهارات</h2>
-    <div class="box" data-en="Communication and persuasion"><i class="fas fa-comments icon"></i> التواصل والإقناع</div>
-    <div class="box" data-en="Time management and organization"><i class="fas fa-clock icon"></i> إدارة الوقت والتنظيم</div>
-    <div class="box" data-en="Basic digital marketing"><i class="fas fa-bullhorn icon"></i> التسويق الرقمي الأساسي</div>
-    <div class="box" data-en="Word / Excel"><i class="fas fa-file-alt icon"></i> Word و Excel</div>
+    <ul>
+      <li>مهارات إقناع وخدمة عملاء قوية</li>
+      <li>سرعة تعلّم عالية واستعداد لاكتساب مهارات جديدة</li>
+      <li>إعادة استخدام أساليب التسويق والتأثير</li>
+      <li>العمل تحت الضغط وفي بيئات متنوعة</li>
+    </ul>
   </section>
 
-  <section id="vision">
-    <h2>رؤيتي</h2>
-    <p class="box" data-en="I want to help real projects succeed and build my own project. I'm driven by learning and persistence.">نفسي أساعد مشاريع حقيقية تنجح، وابدأ مشروعي الخاص. التعلم المستمر والإصرار هما طريقي.</p>
+  <section>
+    <h2>الهوايات والمهارات الشخصية</h2>
+    <ul>
+      <li>📚 القراءة</li>
+      <li>🧠 تنمية الذات</li>
+      <li>💻 تعلّم أونلاين</li>
+      <li>⏱️ تنظيم الوقت</li>
+      <li>🗣️ التواصل الفعّال</li>
+    </ul>
   </section>
 
-  <section id="contact">
-    <h2>تواصل</h2>
-    <p class="box"><i class="fas fa-envelope icon"></i> 2Abdoelsayed7@gmail.com</p>
-    <p class="box"><i class="fas fa-phone icon"></i> 01011738431</p>
+  <section>
+    <h2>اللغات</h2>
+    <ul>
+      <li>اللغة العربية (إتقان تام)</li>
+      <li>اللغة الإنجليزية (متوسطة)</li>
+      <li>اللغة الفرنسية (متعلم)</li>
+    </ul>
   </section>
 
-  <a class="whatsapp-btn" href="https://wa.me/201011738431" target="_blank" title="تواصل واتساب"><i class="fab fa-whatsapp"></i></a>
+  <section>
+    <h2>التعليم</h2>
+    <ul>
+      <li>معهد القاهرة الجديدة العالي</li>
+      <li>الفرقة الثانية – شعبة نظم ومعلومات إدارية</li>
+    </ul>
+  </section>
 
-  <footer>&copy; 2025 عبدالله رفاعي – كل خطوة بتعلّمني طريق النجاح.</footer>
+  <section>
+    <h2>التواصل</h2>
+    <p class="contact-info"><i class="fas fa-envelope"></i> 2Abdoelsayed7@gmail.com</p>
+    <p class="contact-info"><i class="fas fa-phone"></i> 01011738431</p>
+    <p class="contact-info"><i class="fas fa-map-marker-alt"></i> 10 Ahmed El Sayed Street, El Zeitoun, Cairo</p>
+  </section>
 
-  <script>
-    const toggleLang = () => {
-      const current = document.documentElement.lang;
-      const isArabic = current === 'ar';
-      document.documentElement.lang = isArabic ? 'en' : 'ar';
-      document.body.dir = isArabic ? 'ltr' : 'rtl';
-      document.querySelector('.lang-toggle').textContent = isArabic ? 'العربية' : 'English';
-      document.getElementById('name').textContent = isArabic ? 'Abdallah Refai' : 'عبدالله رفاعي';
-      document.getElementById('desc').textContent = isArabic
-        ? 'MIS Student | Building my future step by step'
-        : 'طالب نظم معلومات إدارية | بصمم مستقبلي خطوة بخطوة';
-      document.getElementById('cvBtn').innerHTML = isArabic
-        ? '<i class="fas fa-file-arrow-down"></i> Download CV'
-        : '<i class="fas fa-file-arrow-down"></i> تحميل السيرة الذاتية';
-      document.querySelectorAll('.box').forEach(box => {
-        const enText = box.getAttribute('data-en');
-        if (enText) {
-          const temp = box.innerHTML;
-          box.innerHTML = enText;
-          box.setAttribute('data-en', temp);
-        }
-      });
-    }
-
-    const showSection = id => {
-      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+  <footer>
+    &copy; 2025 عبدالله رفاعي. جميع الحقوق محفوظة.
+  </footer>
 </body>
 </html>
