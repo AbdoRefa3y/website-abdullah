@@ -1,145 +1,215 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Abdallah Refai | Personal Website</title>
+  <title>Abdallah Refai - CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Amiri', serif;
+      padding: 20px;
       background: #f9f9f9;
-      color: #222;
-    }
-    header {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-      position: relative;
-    }
-    header h1 { margin: 0; font-size: 40px; }
-    header p { font-size: 18px; margin-top: 10px; color: #ccc; }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #d4af37;
-      color: white;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .download-cv {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #d4af37;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    h2 {
-      font-size: 28px;
       color: #333;
-      border-bottom: 2px solid #d4af37;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
       line-height: 1.6;
     }
-    footer {
-      background: #1a1a1a;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
+    h1, h2 {
+      color: #222;
     }
-    .whatsapp-btn {
+    .section {
+      margin-bottom: 25px;
+    }
+    .section h2 {
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 5px;
+    }
+    .lang-btn {
       position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background-color: #25d366;
+      top: 10px;
+      left: 10px;
+      background: #d4af37;
       color: white;
-      font-size: 24px;
-      padding: 10px 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      z-index: 999;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .arabic { display: none; direction: rtl; }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 28px; }
-      section { padding: 25px 20px; }
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
-  <header>
-    <button class="lang-toggle" onclick="toggleLang()">العربية</button>
-    <h1>Abdallah Refai</h1>
-    <p>MIS Student | Building my future step by step</p>
-    <a class="download-cv" href="Abdallah_Refai_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
-  </header>
 
-  <div class="english">
-    <section><h2>About Me</h2><p>I'm a second-year MIS student with hands-on experience from real environments. I’m fast-learning, organized, and love solving problems quickly.</p></section>
-    <section><h2>Work Experience</h2><ul><li><b>Sales Representative (2021–2023):</b> Gained customer service experience under pressure.</li><li><b>Advertising Assistant (2023–Present):</b> Assisted with planning and marketing presentations in a real team setting.</li></ul></section>
-    <section><h2>Skills</h2><ul><li>Customer service & persuasion</li><li>Quick learner</li><li>Marketing creativity</li><li>Works well under pressure</li></ul></section>
-    <section><h2>Languages</h2><ul><li>Arabic (Native)</li><li>English (Intermediate)</li><li>French (Learning)</li></ul></section>
-    <section><h2>Education</h2><ul><li>Cairo New Institute</li><li>2nd year – MIS Department</li></ul></section>
-    <section><h2>Contact</h2><ul><li><i class="fas fa-envelope"></i> 2Abdoelsayed7@gmail.com</li><li><i class="fas fa-phone"></i> 01011738431</li><li><i class="fas fa-map-marker-alt"></i> Zeitoun, Cairo</li><li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank">LinkedIn</a></li></ul></section>
+<button class="lang-btn" onclick="toggleLanguage()">عربي / English</button>
+
+<div id="cv-content">
+  <!-- English by default -->
+  <h1>Abdallah Refai</h1>
+  <p><strong>Field:</strong> Management Information Systems Student</p>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>I am a second-year student majoring in MIS. I have practical experience, work well under pressure, and always seek to develop my skills. I am a fast learner and well organized.</p>
   </div>
 
-  <div class="arabic">
-    <section><h2>من أنا</h2><p>طالب في الفرقة الثانية – نظم معلومات إدارية. عندي خبرة عملية حقيقية من الشارع، وسريع التعلّم ومنظّم وأحب أواجه التحديات.</p></section>
-    <section><h2>الخبرات</h2><ul><li><b>ممثل مبيعات (2023–2021):</b> تعامل مباشر مع العملاء تحت ضغط.</li><li><b>مساعد دعاية وإعلان (حتى الآن):</b> تنفيذ عروض وتسويق فعلي.</li></ul></section>
-    <section><h2>المهارات</h2><ul><li>خدمة العملاء والإقناع</li><li>سرعة التعلّم</li><li>إبداع تسويقي</li><li>العمل تحت ضغط</li></ul></section>
-    <section><h2>اللغات</h2><ul><li>العربية (بطلاقة)</li><li>الإنجليزية (متوسطة)</li><li>الفرنسية (يتعلم)</li></ul></section>
-    <section><h2>التعليم</h2><ul><li>معهد القاهرة الجديدة</li><li>الفرقة الثانية – نظم معلومات</li></ul></section>
-    <section><h2>اتصال</h2><ul><li><i class="fas fa-envelope"></i> 2Abdoelsayed7@gmail.com</li><li><i class="fas fa-phone"></i> 01011738431</li><li><i class="fas fa-map-marker-alt"></i> الزيتون، القاهرة</li><li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank">لينكدإن</a></li></ul></section>
+  <div class="section">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>Sales Representative (2021–2023)</li>
+      <li>Advertising Assistant (2023–Present)</li>
+    </ul>
   </div>
 
-  <a class="whatsapp-btn" href="https://wa.me/201011738431" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li>Cairo New Institute</li>
+      <li>Second Year – MIS Department</li>
+    </ul>
+  </div>
 
-  <footer>
-    &copy; 2025 عبدالله رفاعي – كل خطوة بتعلّمني شيئًا جديدًا.
-  </footer>
+  <div class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Fast Learner</li>
+      <li>Organized</li>
+      <li>Team Player</li>
+      <li>Customer Service & Persuasion</li>
+    </ul>
+  </div>
 
-  <script>
-    function toggleLang() {
-      const isArabic = document.querySelector('.arabic').style.display === 'block';
-      document.querySelector('.arabic').style.display = isArabic ? 'none' : 'block';
-      document.querySelector('.english').style.display = isArabic ? 'block' : 'none';
-      document.querySelector('.lang-toggle').textContent = isArabic ? 'العربية' : 'English';
-      document.documentElement.lang = isArabic ? 'en' : 'ar';
-      document.body.dir = isArabic ? 'ltr' : 'rtl';
-    }
-    document.querySelector('.arabic').style.display = 'none';
-    document.querySelector('.english').style.display = 'block';
-  </script>
+  <div class="section">
+    <h2>Languages</h2>
+    <ul>
+      <li>Arabic – Fluent</li>
+      <li>English – Intermediate</li>
+      <li>French – Beginner</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: 2Abdoelsayed7@gmail.com</p>
+    <p>Phone: 01011738431</p>
+    <p>Location: El-Zeitoun, Cairo</p>
+  </div>
+</div>
+
+<script>
+  const cvContent = document.getElementById("cv-content");
+
+  const englishContent = `
+  <h1>Abdallah Refai</h1>
+  <p><strong>Field:</strong> Management Information Systems Student</p>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>I am a second-year student majoring in MIS. I have practical experience, work well under pressure, and always seek to develop my skills. I am a fast learner and well organized.</p>
+  </div>
+
+  <div class="section">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>Sales Representative (2021–2023)</li>
+      <li>Advertising Assistant (2023–Present)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li>Cairo New Institute</li>
+      <li>Second Year – MIS Department</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Fast Learner</li>
+      <li>Organized</li>
+      <li>Team Player</li>
+      <li>Customer Service & Persuasion</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Languages</h2>
+    <ul>
+      <li>Arabic – Fluent</li>
+      <li>English – Intermediate</li>
+      <li>French – Beginner</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: 2Abdoelsayed7@gmail.com</p>
+    <p>Phone: 01011738431</p>
+    <p>Location: El-Zeitoun, Cairo</p>
+  </div>
+`;
+
+  const arabicContent = `
+    <h1>عبدالله رفاعي</h1>
+    <p><strong>المجال:</strong> طالب نظم معلومات إدارية</p>
+
+    <div class="section">
+      <h2>نبذة عني</h2>
+      <p>أنا طالب في السنة الثانية بقسم نظم المعلومات الإدارية. عندي خبرة عملية، أعمل جيدًا تحت الضغط وأسعى دائمًا لتطوير مهاراتي. أتعلم بسرعة ومنظم.</p>
+    </div>
+
+    <div class="section">
+      <h2>الخبرات</h2>
+      <ul>
+        <li>مندوب مبيعات (2021–2023)</li>
+        <li>مساعد في شركة دعاية (2023–الآن)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>التعليم</h2>
+      <ul>
+        <li>معهد القاهرة الجديدة العالي</li>
+        <li>الفرقة الثانية – نظم معلومات</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>المهارات</h2>
+      <ul>
+        <li>سرعة تعلم</li>
+        <li>تنظيم</li>
+        <li>العمل الجماعي</li>
+        <li>الإقناع وخدمة العملاء</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>اللغات</h2>
+      <ul>
+        <li>العربية – بطلاقة</li>
+        <li>الإنجليزية – متوسطة</li>
+        <li>الفرنسية – مبتدئ</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>التواصل</h2>
+      <p>البريد: 2Abdoelsayed7@gmail.com</p>
+      <p>الهاتف: 01011738431</p>
+      <p>الموقع: الزيتون، القاهرة</p>
+    </div>
+  `;
+
+  let isArabic = false;
+  function toggleLanguage() {
+    isArabic = !isArabic;
+    cvContent.innerHTML = isArabic ? arabicContent : englishContent;
+    document.documentElement.lang = isArabic ? "ar" : "en";
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
+  }
+</script>
+
 </body>
 </html>
